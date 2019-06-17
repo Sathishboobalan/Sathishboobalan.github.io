@@ -1,0 +1,47 @@
+.social-btn{
+    width: 40px;
+    height: 40px;
+    background: #f1f1f1;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 30%;
+    overflow: hidden;
+    position: relative;
+}
+.social-btn i{
+    line-height: 40px;
+    font-size: 15px;
+    transition: 0.2s linear;
+}
+.social-btn:hover i{
+    transform: scale(1.1);
+    color: white;
+}
+.social-btn::before{
+    content: "";
+    position: absolute;
+    width:120%;
+    height: 120%;
+    background: black;
+    transform: rotate(45deg);
+    left: -100%;
+    top:90%;
+}
+
+.social-btn:hover::before{
+    animation: hovering .7s .7;
+    top : -10%;
+    left: -10%;
+}
+@keyframes hovering{
+    0%{
+        left: -100%;
+        top:90%; 
+    }50%{
+        left: 10%;
+        top:-30%;
+    }100%{
+        top : -10%;
+        left: -10%;
+    }
+}

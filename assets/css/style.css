@@ -1,0 +1,608 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.active{
+    color: white!important;
+}
+ul li{
+    padding: 10px!important;
+}
+.nav-link::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .1s;
+}
+.active::after{
+    width: 100%;
+    transition: width .5s;
+}
+.home{
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-left: 0px;
+}
+nav{
+    background-color: transparent;
+    transition: 0.4s;
+    z-index: 5;
+    overflow: hidden;
+}
+.name{
+    margin-top: 200px;
+    color: white;
+    font-size: 60px;
+    font-weight: 600;
+}
+.nav-item a{
+    color: rgba(255,255,255,0.7);
+    cursor: pointer;
+}
+.nav-item a:hover{
+    color: white;
+}
+.red{
+    color: red;
+}
+body{
+/*    overflow-x: hidden;*/
+    margin-top: -20px;
+}
+
+
+.row{
+    text-align: center;
+}
+.welcome-banner{
+    z-index: 22;
+    position: relative;
+    font-family: "Montserrat",'Poppins';
+}
+.down-link{
+    border: 2px solid white;
+    width: 30px;
+    height: 50px;
+    border-radius: 20px;
+    margin-top: 350px;
+    z-index: 1;
+    background: black;
+}
+.inside-down-link{
+    border: 2px solid white;
+    height: 7px;
+    width: 5px;
+    position: absolute;
+    margin-left: 10px;
+    background: white;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+.caption-inner{
+    font-size: 25px;
+}
+.typed-static{
+    font-weight: 100;
+}
+
+
+/**********************************************************ABOUT*********************************************************/
+
+
+.about{
+    height: 700px;
+
+    z-index: -1;
+}
+.about-my-self{
+    margin-top: 90px;
+}
+.my-pic{
+    height: 180px;
+    width: 180px;
+    margin-top: 50px;
+    background-color: lightgray;
+}
+.row{
+    margin-top: 20px;
+}
+.row .col-sm-6>h2{
+    color: #111;
+    font-family: "Montserrat",sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.row .col-sm-6>p{
+    font-family: "Montserrat";
+    line-height:1.2;
+    color: #777;
+    margin: 0;
+}
+ .fill{
+    display: block;
+    position: relative;
+    width: 0px;
+     margin: 0;
+    height: 100%;
+    background: #222 none repeat scroll 0 0 !important;
+    border-radius: 0;
+}
+
+.barfiller{
+    background-color: rgba(0,0,0,0.06);
+    border-radius: 0;
+    height: 5px;
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+    margin-top: 3px;
+}
+.barfiller:last-child {
+	margin-bottom: 0
+}
+.tip{
+    margin-top: -20px;
+    padding: 2px 4px;
+    color: #222;
+    top: -8px;
+    font-size: 12px;
+    font-weight: bold;
+    left: 5px;
+    border-radius: 4px !important;
+    position: absolute;
+    z-index: 2;
+}
+h6{
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+.about-content{
+    float: left;
+}
+
+.resume-button,.send{
+    background: none;
+    border: 2px solid black;
+    font-family: "montserrat",sans-serif;
+    padding: 10px 20px;
+    min-width: 200px;
+    margin: 10px;
+    transition: color 0.4s linear;
+    position: relative;
+    
+}
+.resume-button:hover,.send:hover{
+    color: white;
+}
+.resume-button::before,.send::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0.0;
+    transition-timing-function: cubic-bezier(0.4,1.6,0.4,0.7);
+    
+}
+.resume-button::before{
+    transform: scaleX(0)
+}
+.resume-button:hover::before{
+    transform: scaleX(1)
+}
+.send::before{
+    transform : scaleX(0);
+}
+.send:hover::before{
+    transform: scaleY(1);
+}
+
+
+/***************************************************COMMON HEADINGG*****************************************************/
+.education-section{
+    margin-top: 100px;
+    height: 800px;
+    background:#f4f4f4 none repeat scroll 0 0;
+    
+}
+.education{
+    margin-top: 80px;
+}
+.education>h2,.about-my-self>h2,.get-in-touch>h2{
+    z-index: -1!impotant;
+    color: #242424;
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 45px;
+    font-weight: 800;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+    position: relative;
+    text-transform: capitalize;
+}
+.education>h2{
+    z-index: 1!important;
+}
+.education>h2:before,.about-my-self>h2:before,.get-in-touch>h2:before {
+    background: #333 none repeat scroll 0 0;
+    content: "";
+    height: 2px;
+    right: -45%;
+    position: absolute;
+    top: 52%;
+    width: 40%;
+    z-index: -1;
+}
+.education>h2:after,.about-my-self>h2:after,.get-in-touch>h2:after {
+    background: #333 none repeat scroll 0 0;
+    content: "";
+    height: 2px;
+    left: -45%;
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    z-index: -1;
+}
+/******************************************GET IN TOUCH******************************************************************/
+.get-in-touch{
+    padding: 50px 0;
+}
+.form-control{
+    border-color: currentcolor currentcolor #222;
+    -o-border-image: none;
+    border-image: none;
+    border-radius: 0;
+    border-style: none none solid;
+     border-width: 0 0 2px; 
+    box-shadow: none;
+    color: #222;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    height: 3em;
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    background: transparent;
+}
+footer{
+    margin-top: 15px;
+    height: 150px;
+    background: black;
+    margin-bottom: 0;
+    
+}
+
+
+.go-to-top{
+    display: none;
+    position: fixed;
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99;
+    border: 2px solid black;
+    cursor: pointer; 
+    height: 60px;
+    width: 60px;
+    padding: 15px; 
+    border-radius: 50%; 
+    font-size: 18px;
+    background-color: white;
+    transition: 0.5s ease-out;
+}
+.go-to-top i{
+    color: black;
+    font-size: 40px;
+    margin-top: -8px;
+    transition: 0.5s ease-out;
+}
+.go-to-top:hover{
+    background: black;
+    transition: 0.5s ease-in;
+}
+.go-to-top i:hover{
+    color: white;
+    transition: 0.5s ease-in;
+}
+
+
+form:focus{
+    outline: 0!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Media Quries */
+
+@media (max-width:1200px) and (min-width: 992px){
+
+
+}
+
+@media (max-width:991px) and (min-width: 768px){
+
+
+
+}
+
+@media (max-width:767px) and (min-width: 551px){
+
+
+  
+}
+
+@media (max-width: 550px) and (min-width: 352px){
+    body{
+        width: 100%!imporant;
+    }
+    .home{
+        width: 550px!important;
+        height: 880px;
+        background-attachment:inherit;
+    }
+    .name{
+        font-size: 35px;
+        margin-top: 300px;
+    }
+    .caption-inner{
+        font-size: 25px;
+    }
+    .down-link{
+        margin-top:280px;
+        height: 60px;
+        width: 40px;
+    }
+    .inside-down-link{
+        margin-left: 15px;
+        height: 15px;
+    }
+    .about-my-self{
+        margin-left: 90px;
+        width: 100%;
+    }
+    .my-pic{
+        margin-left: 170px;
+        margin-top: 20px;
+    }
+    .about{
+        width: 100%!important;
+    }
+    .abt-name{
+        font-size:30px!important;
+        margin-left: 40px;
+    }
+    .abt-full-content{
+        width: 545px;
+    }
+    .abt-content{
+        text-align: justify!important;
+        font-size: 27px;
+        line-height: 30px!important;
+    }
+    .about-content{
+        font-size: 20px;
+    }
+    .about-icon-gap{
+        margin-top: 15px;
+    }
+    .education-section{
+        margin-top: 450px;
+        width: 550px;
+        height: auto;
+    }
+    .education>h2,.about-my-self>h2,.get-in-touch>h2{
+        z-index: -1!impotant;
+        color: #242424;
+        display: inline-block;
+        font-family: "Montserrat", sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        letter-spacing: 0;
+        margin-bottom: 10px;
+        position: relative;
+        text-transform: capitalize;
+    }
+    .education>h2:before,.about-my-self>h2:before,.get-in-touch>h2:before {
+    background: #333 none repeat scroll 0 0;
+    content: "";
+    height: 2px;
+    right: -35%;
+    position: absolute;
+    top: 52%;
+    width: 30%;
+    z-index: -1;
+}
+.education>h2:after,.about-my-self>h2:after,.get-in-touch>h2:after {
+    background: #333 none repeat scroll 0 0;
+    content: "";
+    height: 2px;
+    left: -35%;
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    z-index: -1;
+}
+    .get-in-touch{
+        margin-top: -40px;
+        width: 500px;
+    }
+    form{
+        margin-left:50px;
+    }
+    footer{
+        width:550px;
+    }
+    .go-to-top{
+        width: 50px;
+        height: 50px;
+        bottom: 160px;
+        right: 40px;
+    }
+    .go-to-top i{
+        margin-left: -5px;
+        margin-top: -15px;
+        
+    }
+    h3{
+        font-size: 25px!important;
+    }
+
+}
+
+@media (max-width: 351px) {
+    body,.home,.about{
+        width: 351px!imporant;
+    }
+    .home{
+        width: 351px!important;
+        height: 650px;
+        background-attachment:inherit;
+    }
+    .name{
+        font-size: 20px;
+        margin-top: 300px;
+    }
+    .caption-inner{
+        font-size: 16px;
+    }
+    .down-link{
+        margin-top:150px;
+    }
+    .about-my-self{
+        margin-left: 12px;
+        width: 100%;
+    }
+    .my-pic{
+        margin-left: 15px;
+        margin-top: 20px;
+    }
+    .abt-name{
+        font-size:17px!important;
+    }
+    .abt-content{
+        text-align: justify!important;
+        font-size: 17px;
+        line-height: 25px!important;
+    }
+    .about-icon-gap{
+        margin-top: 15px;
+    }
+    .education-section{
+        margin-top: 400px;
+        width: 351px;
+        height: auto;
+    }
+    .education>h2,.about-my-self>h2,.get-in-touch>h2{
+        z-index: -1!impotant;
+        color: #242424;
+        display: inline-block;
+        font-family: "Montserrat", sans-serif;
+        font-size: 25px;
+        font-weight: 800;
+        letter-spacing: 0;
+        margin-bottom: 10px;
+        position: relative;
+        text-transform: capitalize;
+    }
+    .education>h2:before,.about-my-self>h2:before,.get-in-touch>h2:before {
+    background: #333 none repeat scroll 0 0;
+    content: "";
+    height: 2px;
+    right: -35%;
+    position: absolute;
+    top: 52%;
+    width: 30%;
+    z-index: -1;
+}
+.education>h2:after,.about-my-self>h2:after,.get-in-touch>h2:after {
+    background: #333 none repeat scroll 0 0;
+    content: "";
+    height: 2px;
+    left: -35%;
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    z-index: -1;
+}
+    .get-in-touch{
+        margin-top: -40px;
+        margin-left: 10px;
+    }
+    form{
+        margin-top: -60px;
+    }
+    footer{
+        width:351px;
+    }
+    .go-to-top{
+        width: 50px;
+        height: 50px;
+        bottom: 160px;
+        right: 20px;
+    }
+    .go-to-top i{
+        margin-left: -5px;
+        margin-top: -15px;
+        
+    }
+    h3{
+        font-size: 20px!important;
+    }
+    
+    
+}
+
